@@ -1,65 +1,82 @@
 import { NextResponse } from "next/server"
 
-// Google Calendar ID - debe ser un calendario publico
-const CALENDAR_ID = process.env.GOOGLE_CALENDAR_ID || ""
-const API_KEY = process.env.GOOGLE_CALENDAR_API_KEY || ""
+// URL del calendario publico en formato iCal (no necesita API key)
+// Se obtiene de: Google Calendar > Configuracion del calendario > Direccion publica en formato iCal
+const ICAL_URL = process.env.GOOGLE_CALENDAR_ICAL_URL || ""
+
+function parseICalDate(dateStr: string): string | null {
+  // Formato: 20240115 o 20240115T100000Z
+  if (!dateStr) return null
+
+  const year = dateStr.substring(0, 4)
+  const month = dateStr.substring(4, 6)
+  const day = dateStr.substring(6, 8)
+
+  return `${year}-${month}-${day}`
+}
+
+function parseICalEvents(icalData: string): string[] {
+  const busyDates: string[] = []
+  const events = icalData.split("BEGIN:VEVENT")
+
+  for (const event of events.slice(1)) {
+    // Buscar DTSTART
+    const dtStartMatch = event.match(/DTSTART[^:]*:(\d{8})/)
+    const dtEndMatch = event.match(/DTEND[^:]*:(\d{8})/)
+
+    if (dtStartMatch) {
+      const startDate = parseICalDate(dtStartMatch[1])
+
+      if (startDate) {
+        if (dtEndMatch) {
+          // Evento de varios dias
+          const endDate = parseICalDate(dtEndMatch[1])
+          if (endDate) {
+            const start = new Date(startDate)
+            const end = new Date(endDate)
+            // El endDate en iCal es exclusivo, asi que restamos un dia
+            end.setDate(end.getDate() - 1)
+
+            const current = new Date(start)
+            while (current <= end) {
+              busyDates.push(current.toISOString().split("T")[0])
+              current.setDate(current.getDate() + 1)
+            }
+          }
+        } else {
+          busyDates.push(startDate)
+        }
+      }
+    }
+  }
+
+  return [...new Set(busyDates)]
+}
 
 export async function GET() {
-  if (!CALENDAR_ID || !API_KEY) {
+  if (!ICAL_URL) {
     // Si no hay configuracion, devolver array vacio (modo demo)
     return NextResponse.json({ busyDates: [] })
   }
 
   try {
-    // Obtener eventos de los proximos 60 dias
-    const now = new Date()
-    const timeMin = now.toISOString()
-    const timeMax = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000).toISOString()
-
-    const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime`
-
-    const response = await fetch(url, {
+    const response = await fetch(ICAL_URL, {
       next: { revalidate: 300 }, // Cache por 5 minutos
     })
 
     if (!response.ok) {
-      console.error("Google Calendar API error:", response.status)
+      console.error("Error fetching iCal:", response.status)
       return NextResponse.json({ busyDates: [] })
     }
 
-    const data = await response.json()
+    const icalData = await response.text()
+    const busyDates = parseICalEvents(icalData)
 
-    // Extraer fechas de los eventos (dias ocupados)
-    const busyDates: string[] = []
-    
-    for (const event of data.items || []) {
-      // Eventos de dia completo tienen "date", eventos con hora tienen "dateTime"
-      const startDate = event.start?.date || event.start?.dateTime?.split("T")[0]
-      const endDate = event.end?.date || event.end?.dateTime?.split("T")[0]
+    // Filtrar solo fechas futuras (hoy y adelante)
+    const today = new Date().toISOString().split("T")[0]
+    const futureDates = busyDates.filter(date => date >= today)
 
-      if (startDate) {
-        // Si es un evento de varios dias, agregar todas las fechas
-        const start = new Date(startDate)
-        const end = endDate ? new Date(endDate) : start
-
-        // Para eventos de dia completo, el endDate es el dia siguiente (exclusivo)
-        // Asi que restamos un dia si es evento de dia completo
-        if (event.end?.date) {
-          end.setDate(end.getDate() - 1)
-        }
-
-        const current = new Date(start)
-        while (current <= end) {
-          busyDates.push(current.toISOString().split("T")[0])
-          current.setDate(current.getDate() + 1)
-        }
-      }
-    }
-
-    // Eliminar duplicados
-    const uniqueDates = [...new Set(busyDates)]
-
-    return NextResponse.json({ busyDates: uniqueDates })
+    return NextResponse.json({ busyDates: futureDates })
   } catch (error) {
     console.error("Error fetching calendar:", error)
     return NextResponse.json({ busyDates: [] })
