@@ -8,7 +8,7 @@ import { MapPin, Clock, Shield, ArrowRight, Phone, Car } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'Transporte de Coches Barcelona | MueveMiCoche - Desde 249€',
-  description: 'Transporte de coches en Barcelona y Catalunya. Recogida en 24h, entrega en toda Espana en 72h. Desde 249€. Presupuesto gratis.',
+  description: 'Transporte de coches en Barcelona y Catalunya. Recogida en 24h, entrega en toda España en 72h. Desde 249€. Presupuesto gratis.',
   keywords: [
     'transporte coches Barcelona',
     'transporte vehiculos Barcelona',
@@ -43,7 +43,7 @@ export default function TransporteCochesBarcelona() {
                 Transporte de Coches en Barcelona
               </h1>
               <p className="text-xl text-white/80 mb-8">
-                Recogemos tu vehiculo en Barcelona y lo entregamos en toda Espana en 72h
+                Recogemos tu vehiculo en Barcelona y lo entregamos en toda España en 72h
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90">

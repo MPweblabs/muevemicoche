@@ -79,7 +79,7 @@ export function ContactSection() {
                 <div>
                   <div className="text-sm text-muted-foreground">Cobertura</div>
                   <div className="text-lg font-semibold text-foreground">
-                    Toda Espana
+                    Toda España
                   </div>
                 </div>
               </div>

@@ -18,7 +18,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Transporte de Coches en Madrid | MueveMiCoche - Recogida en 24h',
-  description: 'Servicio de transporte de coches en Madrid y Comunidad de Madrid. Recogida en 24 horas, entrega en toda Espana en 72h. Presupuesto gratis. Precio cerrado sin sorpresas.',
+  description: 'Servicio de transporte de coches en Madrid y Comunidad de Madrid. Recogida en 24 horas, entrega en toda España en 72h. Presupuesto gratis. Precio cerrado sin sorpresas.',
   keywords: [
     'transporte coches Madrid',
     'transporte vehiculos Madrid',
@@ -107,7 +107,7 @@ const faqs = [
   },
   {
     question: "Cuanto tarda el transporte de coches desde Madrid?",
-    answer: "Garantizamos la entrega en menos de 72 horas a cualquier punto de Espana. Para destinos cercanos como Valencia o Zaragoza, la entrega puede ser en 24 horas."
+    answer: "Garantizamos la entrega en menos de 72 horas a cualquier punto de España. Para destinos cercanos como Valencia o Zaragoza, la entrega puede ser en 24 horas."
   },
   {
     question: "Recogeis el coche en cualquier punto de Madrid?",
@@ -141,7 +141,7 @@ export default function TransporteCochesMadrid() {
                 Transporte de Coches en Madrid
               </h1>
               <p className="text-xl text-white/80 mb-8 max-w-2xl">
-                Recogemos tu vehiculo en cualquier punto de Madrid y lo entregamos en toda Espana en menos de 72 horas. Presupuesto gratis al instante.
+                Recogemos tu vehiculo en cualquier punto de Madrid y lo entregamos en toda España en menos de 72 horas. Presupuesto gratis al instante.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90">
@@ -345,7 +345,7 @@ export default function TransporteCochesMadrid() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "MueveMiCoche Madrid",
-            "description": "Servicio de transporte de coches en Madrid. Recogida en 24 horas y entrega en toda Espana en menos de 72 horas.",
+            "description": "Servicio de transporte de coches en Madrid. Recogida en 24 horas y entrega en toda España en menos de 72 horas.",
             "url": "https://muevemicoche.es/transporte-coches-madrid",
             "telephone": "+34600000000",
             "email": "madrid@muevemicoche.es",

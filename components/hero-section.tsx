@@ -53,7 +53,7 @@ export function HeroSection() {
             </h1>
             
             <p className="mt-8 text-xl text-muted-foreground max-w-lg">
-              Transporte de vehiculos puerta a puerta en toda Espana. 
+              Transporte de vehiculos puerta a puerta en toda España. 
               Sin complicaciones.
             </p>
 

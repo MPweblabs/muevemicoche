@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'MueveMiCoche | Transporte de Coches Madrid - Entrega en 72h | Presupuesto Gratis',
-  description: 'Transporte de coches en Madrid y toda Espana. Recogida en 24h, entrega en 72h. Precio cerrado, 100% asegurado. Presupuesto gratis. Servicio puerta a puerta desde Madrid.',
+  description: 'Transporte de coches en Madrid y toda España. Recogida en 24h, entrega en 72h. Precio cerrado, 100% asegurado. Presupuesto gratis. Servicio puerta a puerta desde Madrid.',
   keywords: [
     'transporte coches Madrid',
     'transporte vehiculos Madrid',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     url: 'https://muevemicoche.es',
     siteName: 'MueveMiCoche',
     title: 'MueveMiCoche | Transporte de Coches Madrid - Entrega en 72h',
-    description: 'Transporte de coches en Madrid y toda Espana. Recogida en 24h, entrega en 72h. Presupuesto gratis.',
+    description: 'Transporte de coches en Madrid y toda España. Recogida en 24h, entrega en 72h. Presupuesto gratis.',
     images: [
       {
         url: '/og-image.jpg',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'MueveMiCoche | Transporte de Coches Madrid',
-    description: 'Transporte de coches en Madrid y toda Espana. Entrega en 72h. Presupuesto gratis.',
+    description: 'Transporte de coches en Madrid y toda España. Entrega en 72h. Presupuesto gratis.',
     images: ['/og-image.jpg'],
   },
   alternates: {
@@ -97,7 +97,7 @@ export default function RootLayout({
               "@id": "https://muevemicoche.es/#organization",
               "name": "MueveMiCoche",
               "alternateName": "MueveMiCoche Madrid",
-              "description": "Servicio de transporte de coches en Madrid y toda Espana. Recogida en 24h, entrega en 72h. Presupuesto gratis.",
+              "description": "Servicio de transporte de coches en Madrid y toda España. Recogida en 24h, entrega en 72h. Presupuesto gratis.",
               "url": "https://muevemicoche.es",
               "telephone": "+34600000000",
               "email": "info@muevemicoche.es",
@@ -126,7 +126,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Country",
-                  "name": "Espana"
+                  "name": "España"
                 }
               ],
               "priceRange": "€€",
@@ -159,7 +159,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Transporte de coches Madrid",
-                      "description": "Recogida de vehiculos en Madrid y entrega en toda Espana en 72h"
+                      "description": "Recogida de vehiculos en Madrid y entrega en toda España en 72h"
                     }
                   },
                   {

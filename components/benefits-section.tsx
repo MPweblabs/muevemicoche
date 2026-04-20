@@ -4,7 +4,7 @@ const benefits = [
   {
     icon: Clock,
     title: "Entrega en 72h",
-    description: "Garantizada en toda Espana.",
+    description: "Garantizada en toda España.",
     highlight: true,
   },
   {

@@ -74,7 +74,7 @@ export function Footer() {
               <span className="text-2xl font-bold text-background">MueveMiCoche</span>
             </Link>
             <p className="mt-4 max-w-sm text-background/50">
-              Transporte de vehiculos puerta a puerta en toda Espana. Entrega garantizada en 72 horas.
+              Transporte de vehiculos puerta a puerta en toda España. Entrega garantizada en 72 horas.
             </p>
             {/* Social Links */}
             <div className="mt-6 flex gap-3">
