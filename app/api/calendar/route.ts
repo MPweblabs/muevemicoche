@@ -6,11 +6,11 @@ const ICAL_URL = process.env.GOOGLE_CALENDAR_ICAL_URL || ""
 function parseICalDate(dateStr: string): string | null {
   // Formato: 20240115 o 20240115T100000Z
   if (!dateStr) return null
-  
+
   const year = dateStr.substring(0, 4)
   const month = dateStr.substring(4, 6)
   const day = dateStr.substring(6, 8)
-  
+
   return `${year}-${month}-${day}`
 }
 
@@ -25,7 +25,7 @@ function parseICalEvents(icalData: string): string[] {
 
     if (dtStartMatch) {
       const startDate = parseICalDate(dtStartMatch[1])
-      
+
       if (startDate) {
         if (dtEndMatch) {
           // Evento de varios dias
@@ -59,7 +59,8 @@ export async function GET() {
 
   try {
     const response = await fetch(ICAL_URL, {
-      next: { revalidate: 300 }, // Cache por 5 minutos
+      cache: "no-store", // Sin cache para que siempre lea en tiempo real
+
     })
 
     if (!response.ok) {
