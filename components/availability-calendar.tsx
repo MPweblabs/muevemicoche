@@ -34,19 +34,23 @@ export function AvailabilityCalendar() {
   const [currentYear, setCurrentYear] = useState(today.getFullYear())
   const [busyDates, setBusyDates] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isDemo, setIsDemo] = useState(false)
 
   useEffect(() => {
     async function fetchBusyDates() {
       try {
         const response = await fetch("/api/calendar")
         const data = await response.json()
-        
-        if (data.busyDates && data.busyDates.length > 0) {
-          setBusyDates(data.busyDates)
-        } else {
+
+        if (data.isDemo) {
+          setIsDemo(true)
           setBusyDates(DEMO_BUSY_DATES)
+        } else {
+          setIsDemo(false)
+          setBusyDates(data.busyDates || [])
         }
       } catch {
+        setIsDemo(true)
         setBusyDates(DEMO_BUSY_DATES)
       } finally {
         setIsLoading(false)
@@ -120,6 +124,11 @@ export function AvailabilityCalendar() {
           <p className="mt-2 md:mt-4 text-muted-foreground">
             Verde = disponible | Rojo = ocupado
           </p>
+          {isDemo && (
+            <p className="mt-2 text-xs text-amber-600 bg-amber-50 inline-block px-3 py-1 rounded-full">
+              Modo demo - Calendario no configurado
+            </p>
+          )}
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -155,10 +164,10 @@ export function AvailabilityCalendar() {
                       {MONTHS[currentMonth]} {currentYear}
                     </h3>
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    size="icon" 
-                    onClick={goToNextMonth} 
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={goToNextMonth}
                     className="rounded-full h-9 w-9 md:h-10 md:w-10"
                   >
                     <ChevronRight className="h-5 w-5" />
@@ -198,8 +207,8 @@ export function AvailabilityCalendar() {
                           className={`
                             aspect-square flex items-center justify-center rounded-lg md:rounded-xl 
                             text-xs md:text-sm font-semibold transition-all duration-200 cursor-default
-                            ${past 
-                              ? "text-muted-foreground/30 bg-transparent" 
+                            ${past
+                              ? "text-muted-foreground/30 bg-transparent"
                               : busy
                                 ? "bg-red-500 text-white"
                                 : todayDate
@@ -258,9 +267,9 @@ export function AvailabilityCalendar() {
                 <p className="text-sm text-background/60 mb-4">
                   Contactanos y buscamos una solucion
                 </p>
-                <Button 
-                  asChild 
-                  variant="secondary" 
+                <Button
+                  asChild
+                  variant="secondary"
                   className="w-full bg-background text-foreground hover:bg-background/90"
                 >
                   <a href="#contacto">Contactar</a>
