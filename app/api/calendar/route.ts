@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 
 // URL del calendario publico en formato iCal (no necesita API key)
 // Se obtiene de: Google Calendar > Configuracion del calendario > Direccion publica en formato iCal
+// Actualizado: lectura dinamica de env var
 const ICAL_URL = process.env.GOOGLE_CALENDAR_ICAL_URL || ""
 
 function parseICalDate(dateStr: string): string | null {
@@ -54,31 +55,42 @@ function parseICalEvents(icalData: string): string[] {
 }
 
 export async function GET() {
+  console.log("[v0] GOOGLE_CALENDAR_ICAL_URL:", ICAL_URL ? "configurada" : "NO configurada")
+
   if (!ICAL_URL) {
-    // Si no hay configuracion, devolver array vacio (modo demo)
-    return NextResponse.json({ busyDates: [] })
+    // Si no hay configuracion, devolver objeto indicando modo demo
+    return NextResponse.json({ busyDates: [], isDemo: true })
   }
 
   try {
+    console.log("[v0] Fetching iCal from:", ICAL_URL.substring(0, 50) + "...")
+
     const response = await fetch(ICAL_URL, {
-      next: { revalidate: 300 }, // Cache por 5 minutos
+      next: { revalidate: 60 }, // Cache por 1 minuto para testing
     })
 
+    console.log("[v0] iCal response status:", response.status)
+
     if (!response.ok) {
-      console.error("Error fetching iCal:", response.status)
-      return NextResponse.json({ busyDates: [] })
+      console.error("[v0] Error fetching iCal:", response.status)
+      return NextResponse.json({ busyDates: [], isDemo: true, error: "fetch_failed" })
     }
 
     const icalData = await response.text()
+    console.log("[v0] iCal data length:", icalData.length, "chars")
+    console.log("[v0] iCal preview:", icalData.substring(0, 200))
+
     const busyDates = parseICalEvents(icalData)
+    console.log("[v0] Parsed busy dates:", busyDates)
 
     // Filtrar solo fechas futuras (hoy y adelante)
     const today = new Date().toISOString().split("T")[0]
     const futureDates = busyDates.filter(date => date >= today)
+    console.log("[v0] Future dates:", futureDates)
 
-    return NextResponse.json({ busyDates: futureDates })
+    return NextResponse.json({ busyDates: futureDates, isDemo: false })
   } catch (error) {
-    console.error("Error fetching calendar:", error)
-    return NextResponse.json({ busyDates: [] })
+    console.error("[v0] Error fetching calendar:", error)
+    return NextResponse.json({ busyDates: [], isDemo: true, error: String(error) })
   }
 }
