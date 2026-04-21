@@ -41,7 +41,7 @@ export function AvailabilityCalendar() {
       try {
         const response = await fetch("/api/calendar")
         const data = await response.json()
-
+        
         if (data.isDemo) {
           setIsDemo(true)
           setBusyDates(DEMO_BUSY_DATES)
@@ -164,10 +164,10 @@ export function AvailabilityCalendar() {
                       {MONTHS[currentMonth]} {currentYear}
                     </h3>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={goToNextMonth}
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    onClick={goToNextMonth} 
                     className="rounded-full h-9 w-9 md:h-10 md:w-10"
                   >
                     <ChevronRight className="h-5 w-5" />
@@ -206,18 +206,23 @@ export function AvailabilityCalendar() {
                           key={day}
                           className={`
                             aspect-square flex items-center justify-center rounded-lg md:rounded-xl 
-                            text-xs md:text-sm font-semibold transition-all duration-200 cursor-default
-                            ${past
-                              ? "text-muted-foreground/30 bg-transparent"
-                              : busy
-                                ? "bg-red-500 text-white"
-                                : todayDate
-                                  ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
-                                  : "bg-green-500 text-white"
+                            text-xs md:text-sm font-semibold transition-all duration-200 cursor-default relative
+                            ${past 
+                              ? "text-muted-foreground/30 bg-transparent" 
+                              : busy && todayDate
+                                ? "bg-red-500 text-white ring-2 ring-foreground ring-offset-2"
+                                : busy
+                                  ? "bg-red-500 text-white"
+                                  : todayDate
+                                    ? "bg-primary text-primary-foreground ring-2 ring-primary ring-offset-2"
+                                    : "bg-green-500 text-white"
                             }
                           `}
                         >
                           {day}
+                          {todayDate && (
+                            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-current rounded-full" />
+                          )}
                         </div>
                       )
                     })}
@@ -252,8 +257,9 @@ export function AvailabilityCalendar() {
                     <span className="text-sm text-muted-foreground">Ocupado</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary ring-2 ring-primary ring-offset-2 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-primary ring-2 ring-primary ring-offset-2 flex items-center justify-center relative">
                       <span className="text-xs font-semibold text-primary-foreground">15</span>
+                      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary-foreground rounded-full" />
                     </div>
                     <span className="text-sm text-muted-foreground">Hoy</span>
                   </div>
@@ -267,9 +273,9 @@ export function AvailabilityCalendar() {
                 <p className="text-sm text-background/60 mb-4">
                   Contactanos y buscamos una solucion
                 </p>
-                <Button
-                  asChild
-                  variant="secondary"
+                <Button 
+                  asChild 
+                  variant="secondary" 
                   className="w-full bg-background text-foreground hover:bg-background/90"
                 >
                   <a href="#contacto">Contactar</a>
