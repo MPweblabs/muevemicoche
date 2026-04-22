@@ -34,11 +34,11 @@ export function AboutSection() {
               {"¿Te gusta conducir?"}
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Llevamos anos transportando vehiculos por toda Espana. 
-              Nuestro equipo de profesionales garantiza que tu coche 
+              Llevamos anos transportando vehiculos por toda Espana.
+              Nuestro equipo de profesionales garantiza que tu coche
               llegue en perfectas condiciones.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-10">
               {features.map((feature) => (
                 <div key={feature.title} className="flex items-center gap-3">
@@ -58,9 +58,9 @@ export function AboutSection() {
           {/* Right - Visual */}
           <div className="relative">
             <div className="aspect-square rounded-3xl bg-secondary overflow-hidden relative">
-              <img 
-                src="/images/conducir.jpg" 
-                alt="Coche en carretera al atardecer con vistas al mar"
+              <img
+                src="/images/portacoches.jpg"
+                alt="Portacoches transportando vehiculos por carretera"
                 className="w-full h-full object-cover"
               />
             </div>

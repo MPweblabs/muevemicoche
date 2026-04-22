@@ -34,8 +34,18 @@ export function HeroSection() {
   }
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center bg-background">
-      <div className="container mx-auto px-4 py-16 md:py-24">
+    <section id="hero" className="relative min-h-[90vh] flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/conducir.jpg"
+          alt="Carretera al atardecer"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-transparent" />
+      </div>
+
+      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="grid gap-16 lg:grid-cols-2 items-center">
           {/* Left - Big Typography */}
           <div className="max-w-2xl">
@@ -46,14 +56,14 @@ export function HeroSection() {
               </span>
               Disponible ahora
             </div>
-            
+
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
               Tu coche donde quieras en{" "}
               <span className="text-primary">72 horas</span>
             </h1>
-            
+
             <p className="mt-8 text-xl text-muted-foreground max-w-lg">
-              Transporte de vehiculos puerta a puerta en toda España. 
+              Transporte de vehiculos puerta a puerta en toda Espana.
               Sin complicaciones.
             </p>
 
@@ -83,7 +93,7 @@ export function HeroSection() {
               <p className="text-background/60 mb-8">
                 Respuesta en menos de 1 hora
               </p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <div className="relative">
@@ -129,8 +139,8 @@ export function HeroSection() {
                   </Select>
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl mt-2"
                   size="lg"
                 >
