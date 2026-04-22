@@ -31,10 +31,10 @@ export function AboutSection() {
               Sobre nosotros
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4 leading-tight">
-              Expertos en mover tu vehiculo
+              {"¿Te gusta conducir?"}
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Llevamos años transportando vehiculos por toda España. 
+              Llevamos anos transportando vehiculos por toda Espana. 
               Nuestro equipo de profesionales garantiza que tu coche 
               llegue en perfectas condiciones.
             </p>
@@ -57,15 +57,12 @@ export function AboutSection() {
 
           {/* Right - Visual */}
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-secondary overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-8xl font-bold text-primary/20">72h</div>
-                  <p className="text-xl font-medium text-foreground mt-4">
-                    Tiempo maximo de entrega
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-square rounded-3xl bg-secondary overflow-hidden relative">
+              <img 
+                src="/images/conducir.jpg" 
+                alt="Coche en carretera al atardecer con vistas al mar"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Floating card */}
             <div className="absolute -bottom-6 -left-6 bg-foreground text-background p-6 rounded-2xl shadow-xl">

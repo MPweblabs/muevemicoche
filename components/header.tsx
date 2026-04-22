@@ -10,6 +10,7 @@ const navItems = [
   { label: "Proceso", href: "#como-funciona" },
   { label: "Ventajas", href: "#beneficios" },
   { label: "Calendario", href: "#disponibilidad" },
+  { label: "Colaboraciones", href: "#colaboraciones"},
   { label: "Contacto", href: "#contacto" },
 ]
 

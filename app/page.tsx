@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/about-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { BenefitsSection } from "@/components/benefits-section"
 import { AvailabilityCalendar } from "@/components/availability-calendar"
+import { CollaborationsSection } from "@/components/collaborations-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -20,6 +21,7 @@ export default function Home() {
         <HowItWorksSection />
         <BenefitsSection />
         <AvailabilityCalendar />
+        <CollaborationsSection />
         <ContactSection />
       </main>
       <Footer />

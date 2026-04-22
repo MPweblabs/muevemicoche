@@ -121,9 +121,6 @@ export function AvailabilityCalendar() {
           <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             Disponibilidad
           </h2>
-          <p className="mt-2 md:mt-4 text-muted-foreground">
-            Verde = disponible | Rojo = ocupado
-          </p>
           {isDemo && (
             <p className="mt-2 text-xs text-amber-600 bg-amber-50 inline-block px-3 py-1 rounded-full">
               Modo demo - Calendario no configurado
