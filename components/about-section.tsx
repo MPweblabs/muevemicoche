@@ -59,8 +59,8 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-square rounded-3xl bg-secondary overflow-hidden relative">
               <img
-                src="/images/portacoches.jpg"
-                alt="Portacoches transportando vehiculos por carretera"
+                src="/images/conductor-profesional.jpg"
+                alt="Vehículo conducido por conductor profesional"
                 className="w-full h-full object-cover"
               />
             </div>
