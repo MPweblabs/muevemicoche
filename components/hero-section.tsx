@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { RequirementsInfo } from "@/components/requirements-info"
 
 const vehicleTypes = [
   { value: "sedan", label: "Turismo / Sedan" },
@@ -63,7 +64,7 @@ export function HeroSection() {
             </h1>
 
             <p className="mt-8 text-xl text-muted-foreground max-w-lg">
-              Transporte de vehiculos puerta a puerta en toda Espana.
+              Transporte de vehiculos puerta a puerta en toda España.
               Sin complicaciones.
             </p>
 
@@ -152,6 +153,10 @@ export function HeroSection() {
               <p className="mt-6 text-center text-sm text-background/50">
                 Sin compromiso. Respuesta inmediata.
               </p>
+
+              <div className="mt-6">
+                <RequirementsInfo variant="dark" />
+              </div>
             </div>
           </div>
         </div>

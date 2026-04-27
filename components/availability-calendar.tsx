@@ -268,7 +268,7 @@ export function AvailabilityCalendar() {
                 <CalendarX className="w-8 h-8 mb-3 text-background/60" />
                 <h4 className="font-semibold mb-2">No encuentras fecha?</h4>
                 <p className="text-sm text-background/60 mb-4">
-                  Contactanos y buscamos una solucion
+                  Contactaños y buscamos una solucion
                 </p>
                 <Button 
                   asChild 
@@ -283,7 +283,7 @@ export function AvailabilityCalendar() {
             {/* Mobile CTA - shown only on mobile */}
             <div className="lg:hidden mt-4">
               <Button asChild className="w-full" size="lg">
-                <a href="#contacto">No encuentras fecha? Contactanos</a>
+                <a href="#contacto">No encuentras fecha? Contactaños</a>
               </Button>
             </div>
           </div>

@@ -82,7 +82,7 @@ export function CollaborationsSection() {
             href="#contacto" 
             className="text-primary font-medium hover:underline"
           >
-            Contactanos para mas informacion
+            Contactaños para mas informacion
           </a>
         </div>
       </div>

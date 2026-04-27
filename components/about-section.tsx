@@ -34,7 +34,7 @@ export function AboutSection() {
               {"¿Te gusta conducir?"}
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Llevamos anos transportando vehiculos por toda Espana.
+              Llevamos años transportando vehiculos por toda España.
               Nuestro equipo de profesionales garantiza que tu coche
               llegue en perfectas condiciones.
             </p>

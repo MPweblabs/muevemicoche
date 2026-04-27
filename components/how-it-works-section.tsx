@@ -33,7 +33,7 @@ export function HowItWorksSection() {
             Proceso
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4">
-            Asi de facil
+            Así de fácil
           </h2>
         </div>
 

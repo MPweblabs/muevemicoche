@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import { RequirementsInfo } from "@/components/requirements-info"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export function ContactSection() {
               Hablemos de tu transporte
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Estamos aqui para ayudarte. Contactanos y te respondemos en menos de 1 hora.
+              Estamos aqui para ayudarte. Contactaños y te respondemos en menos de 1 hora.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -83,6 +84,10 @@ export function ContactSection() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-10">
+              <RequirementsInfo variant="light" />
             </div>
           </div>
 
