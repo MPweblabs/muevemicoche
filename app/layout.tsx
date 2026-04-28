@@ -99,7 +99,7 @@ export default function RootLayout({
               "alternateName": "MueveMiCoche Madrid",
               "description": "Servicio de transporte de coches en Madrid y toda España. Recogida en 24h, entrega en 72h. Presupuesto gratis.",
               "url": "https://muevemicoche.es",
-              "telephone": "+34600000000",
+              "telephone": "+34603950295",
               "email": "info@muevemicoche.es",
               "address": {
                 "@type": "PostalAddress",

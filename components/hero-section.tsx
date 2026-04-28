@@ -30,7 +30,7 @@ export function HeroSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const message = `Hola, me gustaria solicitar presupuesto:\n\n- Origen: ${origin}\n- Destino: ${destination}\n- Vehiculo: ${vehicleTypes.find(v => v.value === vehicleType)?.label || vehicleType}`
-    const whatsappUrl = `https://wa.me/34600000000?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/34603950295?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 

@@ -22,7 +22,7 @@ export function ContactSection() {
     e.preventDefault()
     if (!acceptedPrivacy) return
     const message = `Hola, me gustaria contactar:\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTelefono: ${formData.phone}\n\nMensaje: ${formData.message}`
-    window.open(`https://wa.me/34600000000?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/34603950295?text=${encodeURIComponent(message)}`, '_blank')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -62,8 +62,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Telefono</div>
-                  <a href="tel:+34600000000" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                    +34 600 000 000
+                  <a href="tel:+34603950295" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
+                    +34 603 95 02 95
                   </a>
                 </div>
               </div>
