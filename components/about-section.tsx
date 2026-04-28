@@ -59,7 +59,7 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-square rounded-3xl bg-secondary overflow-hidden relative">
               <img
-                src="/images/conductor.webp"
+                src="/images/conductor.png"
                 alt="Vehículo conducido por conductor profesional"
                 className="w-full h-full object-cover"
               />
