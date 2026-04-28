@@ -1,74 +1,141 @@
-import { ArrowRight } from "lucide-react"
+import { FileText, CalendarDays, UserCheck, MapPin, ShieldCheck, Home, Clock, Car, ArrowRight, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const steps = [
   {
     number: "01",
-    title: "Solicita presupuesto",
-    description: "Rellena el formulario con origen, destino y tipo de vehiculo.",
+    icon: FileText,
+    title: "Presupuesto",
+    description: "Indica origen y destino",
   },
   {
     number: "02",
-    title: "Confirma y reserva",
-    description: "Recibe tu presupuesto y elige la fecha de recogida.",
+    icon: CalendarDays,
+    title: "Reserva",
+    description: "Elige fecha",
   },
   {
     number: "03",
-    title: "Recogemos tu coche",
-    description: "Nuestro equipo recoge el vehiculo en el punto acordado.",
+    icon: UserCheck,
+    title: "Recogida profesional",
+    description: "Conductor asignado",
   },
   {
     number: "04",
+    icon: MapPin,
     title: "Entrega garantizada",
-    description: "Tu coche llega a destino en menos de 72 horas.",
+    description: "Rapido y seguro",
   },
 ]
 
+
+
 export function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="py-20 md:py-32 bg-secondary">
+    <section id="como-funciona" className="py-20 md:py-32 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm font-medium text-primary uppercase tracking-wider">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-sm font-semibold text-primary uppercase tracking-widest">
             Proceso
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4">
-            Así de fácil
+          <div className="w-8 h-0.5 bg-primary mx-auto mt-3 mb-6" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+            Como trasladamos tu coche{" "}
+            <br className="hidden md:block" />
+            en Espana <span className="text-primary">en 4 pasos</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Steps */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 mb-16">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative group">
-              <div className="bg-background rounded-2xl p-8 h-full border border-transparent hover:border-primary/20 transition-all hover:shadow-lg">
-                <span className="text-6xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
+            <div key={step.number} className="flex items-center">
+              {/* Step Card */}
+              <div className="relative bg-background rounded-2xl p-6 md:p-8 shadow-sm border border-border w-full md:w-56 lg:w-64 text-center">
+                {/* Number Badge */}
+                <div className="absolute -top-3 left-4 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-lg">
                   {step.number}
-                </span>
-                <h3 className="text-xl font-bold text-foreground mt-4">
+                </div>
+
+                {/* Icon */}
+                <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <step.icon className="w-10 h-10 text-primary" strokeWidth={1.5} />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold text-foreground mb-2">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed">
+
+                {/* Divider */}
+                <div className="w-8 h-0.5 bg-primary mx-auto mb-3" />
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground">
                   {step.description}
                 </p>
               </div>
-              
+
               {/* Arrow connector */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                  <ArrowRight className="h-6 w-6 text-border" />
+                <div className="hidden md:flex items-center px-2 lg:px-4">
+                  <div className="flex items-center gap-1 text-primary/40">
+                    <span className="w-1 h-1 rounded-full bg-current" />
+                    <span className="w-1 h-1 rounded-full bg-current" />
+                    <span className="w-1 h-1 rounded-full bg-current" />
+                    <span className="w-1 h-1 rounded-full bg-current" />
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button asChild size="lg" className="rounded-full px-8 h-12">
+        {/* Features Cards - Individual pieces */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+          <div className="bg-background rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center text-center gap-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+              <ShieldCheck className="w-7 h-7 text-primary" />
+            </div>
+            <span className="font-bold text-foreground text-sm uppercase tracking-wider">
+              Seguro incluido
+            </span>
+          </div>
+
+          <div className="bg-background rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center text-center gap-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+              <Home className="w-7 h-7 text-primary" />
+            </div>
+            <span className="font-bold text-foreground text-sm uppercase tracking-wider">
+              Puerta a puerta
+            </span>
+          </div>
+
+          <div className="bg-background rounded-2xl shadow-sm border border-border p-6 flex flex-col items-center text-center gap-3">
+            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+              <Clock className="w-7 h-7 text-primary" />
+            </div>
+            <span className="font-bold text-foreground text-sm uppercase tracking-wider">
+              Seguimiento en tiempo real
+            </span>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Button asChild size="lg" className="rounded-full px-8 h-14 text-base gap-3">
             <a href="#hero">
-              Empezar ahora
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <Car className="w-5 h-5" />
+              Solicitar presupuesto
+              <ArrowRight className="w-5 h-5" />
             </a>
           </Button>
+          <p className="mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-primary" />
+            Rapidez, seguridad y confianza en cada traslado
+          </p>
         </div>
       </div>
     </section>

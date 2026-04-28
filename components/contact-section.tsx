@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
 import { RequirementsInfo } from "@/components/requirements-info"
+import { Phone, Mail, MapPin, Send } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,10 +20,7 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!acceptedPrivacy) {
-      alert("Debes aceptar la politica de privacidad")
-      return
-    }
+    if (!acceptedPrivacy) return
     const message = `Hola, me gustaria contactar:\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTelefono: ${formData.phone}\n\nMensaje: ${formData.message}`
     window.open(`https://wa.me/34600000000?text=${encodeURIComponent(message)}`, '_blank')
   }
@@ -33,88 +30,96 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="py-20 md:py-32 bg-secondary">
+    <section id="contacto" className="py-24 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
-          {/* Left - Content */}
-          <div>
-            <span className="text-sm font-medium text-primary uppercase tracking-wider">
-              Contacto
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4 leading-tight">
-              Hablemos de tu transporte
-            </h2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Estamos aqui para ayudarte. Contactaños y te respondemos en menos de 1 hora.
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-primary font-semibold tracking-widest text-sm">
+            CONTACTO
+          </span>
+          <div className="w-12 h-0.5 bg-primary mx-auto mt-4 mb-6" />
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
+            Hablamos cuando{" "}
+            <span className="text-primary">quieras</span>
+          </h2>
+
+          <div className="mt-10">
+            <RequirementsInfo variant="light" />
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Left - Contact Info */}
+          <div className="space-y-8">
+            <p className="text-lg text-muted-foreground">
+              Estamos aqui para ayudarte. Contactanos por el medio que prefieras.
             </p>
 
-            <div className="mt-10 space-y-6">
-              <a href="tel:+34600000000" className="flex items-center gap-4 group">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-foreground group-hover:bg-primary transition-colors">
-                  <Phone className="h-6 w-6 text-background" />
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Telefono</div>
-                  <div className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <a href="tel:+34600000000" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
                     +34 600 000 000
-                  </div>
+                  </a>
                 </div>
-              </a>
+              </div>
 
-              <a href="mailto:info@muevemicoche.es" className="flex items-center gap-4 group">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-foreground group-hover:bg-primary transition-colors">
-                  <Mail className="h-6 w-6 text-background" />
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <a href="mailto:info@muevemicoche.es" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
                     info@muevemicoche.es
-                  </div>
+                  </a>
                 </div>
-              </a>
+              </div>
 
               <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-foreground">
-                  <MapPin className="h-6 w-6 text-background" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Cobertura</div>
                   <div className="text-lg font-semibold text-foreground">
-                    Toda España
+                    Toda Espana
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10">
-              <RequirementsInfo variant="light" />
-            </div>
+
           </div>
 
           {/* Right - Form */}
-          <div className="bg-background rounded-3xl p-8 md:p-10 shadow-xl">
-            <h3 className="text-2xl font-bold text-foreground mb-8">
-              Escribenos
+          <div className="bg-background rounded-2xl p-8 shadow-sm border border-border">
+            <h3 className="text-xl font-semibold text-foreground mb-6">
+              Enviar mensaje
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
+
+            <form onSubmit={handleSubmit} className="space-y-4">
               <Input
                 name="name"
                 type="text"
-                placeholder="Nombre completo"
+                placeholder="Nombre"
                 value={formData.name}
                 onChange={handleChange}
-                className="h-14 rounded-xl bg-secondary border-0"
+                className="h-12 bg-muted border-0"
                 required
               />
-
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 <Input
                   name="email"
                   type="email"
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-14 rounded-xl bg-secondary border-0"
+                  className="h-12 bg-muted border-0"
                   required
                 />
                 <Input
@@ -123,28 +128,27 @@ export function ContactSection() {
                   placeholder="Telefono"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="h-14 rounded-xl bg-secondary border-0"
+                  className="h-12 bg-muted border-0"
                   required
                 />
               </div>
-
               <Textarea
                 name="message"
-                placeholder="Tu mensaje..."
+                placeholder="Mensaje"
                 value={formData.message}
                 onChange={handleChange}
-                className="min-h-[120px] rounded-xl bg-secondary border-0 resize-none"
+                className="min-h-[120px] bg-muted border-0 resize-none"
                 required
               />
 
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-2">
                 <Checkbox
                   id="privacy"
                   checked={acceptedPrivacy}
                   onCheckedChange={(checked) => setAcceptedPrivacy(checked === true)}
-                  className="mt-0.5"
+                  className="mt-0.5 border-1 border-gray-900"
                 />
-                <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
+                <label htmlFor="privacy" className="text-sm text-muted-foreground">
                   Acepto la{" "}
                   <Link href="/privacidad" className="text-primary hover:underline">
                     politica de privacidad
@@ -152,9 +156,13 @@ export function ContactSection() {
                 </label>
               </div>
 
-              <Button type="submit" className="w-full h-14 text-base font-semibold rounded-xl" size="lg">
+              <Button
+                type="submit"
+                className="w-full h-12"
+                disabled={!acceptedPrivacy}
+              >
+                <Send className="w-4 h-4 mr-2" />
                 Enviar mensaje
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </form>
           </div>
