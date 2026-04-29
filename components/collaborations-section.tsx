@@ -7,28 +7,28 @@ import { Handshake, Plus } from "lucide-react"
 // 2. Cambia "logo: null" por "logo: '/logos/nombre-empresa.png'"
 const collaborators = [
   { 
-    name: "Empresa 1", 
-    logo: null, // Cambia a: "/logos/empresa1.png"
+    name: "Bca group", 
+    logo: "/images/collaborations/bca-group.png", // Cambia a: "/logos/empresa1.png"
   },
   { 
-    name: "Empresa 2", 
-    logo: null,
+    name: "Automóviles Cobeña", 
+    logo: "/images/collaborations/automovilescobena.png",
   },
   { 
-    name: "Empresa 3", 
-    logo: null,
+    name: "LocalizaVO", 
+    logo: "/images/collaborations/localiza.jpeg",
   },
   { 
-    name: "Empresa 4", 
-    logo: null,
+    name: "Renault", 
+    logo: "/images/collaborations/renault.jpeg",
   },
   { 
-    name: "Empresa 5", 
-    logo: null,
+    name: "Europcar", 
+    logo: "/images/collaborations/Europcar.jpeg",
   },
   { 
     name: "Empresa 6", 
-    logo: null,
+    logo: "/images/collaborations/Alcopa.jpeg",
   },
 ]
 
