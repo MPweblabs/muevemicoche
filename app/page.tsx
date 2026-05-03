@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/hero-section"
 import { StatsBanner } from "@/components/stats-banner"
 import { AboutSection } from "@/components/about-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
-import { BenefitsSection } from "@/components/benefits-section"
+import { FaqSection } from "@/components/faq-section"
 import { AvailabilityCalendar } from "@/components/availability-calendar"
 import { CollaborationsSection } from "@/components/collaborations-section"
 import { ContactSection } from "@/components/contact-section"
@@ -19,7 +19,7 @@ export default function Home() {
         <StatsBanner />
         <AboutSection />
         <HowItWorksSection />
-        <BenefitsSection />
+        <FaqSection />
         <AvailabilityCalendar />
         <CollaborationsSection />
         <ContactSection />

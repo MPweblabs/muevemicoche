@@ -1,14 +1,15 @@
-import { Shield, Truck, Clock, CheckCircle } from "lucide-react"
+import { Shield, Truck, Clock, CheckCircle, File, Car } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { title } from "process"
 
 const features = [
   {
     icon: Shield,
-    title: "Seguro a todo riesgo",
+    title: "Contacto directo con conductor",
   },
   {
     icon: Truck,
-    title: "Flota moderna",
+    title: "Trabajamos con flota",
   },
   {
     icon: Clock,
@@ -18,6 +19,14 @@ const features = [
     icon: CheckCircle,
     title: "Profesionales certificados",
   },
+  {
+    icon: File,
+    title: "Carnet tipo B1",
+  },
+  {
+    icon: Car,
+    title: "Industriales y personales"
+  }
 ]
 
 export function AboutSection() {

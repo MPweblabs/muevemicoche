@@ -1,8 +1,8 @@
 const stats = [
   { value: "5.000+", label: "Vehiculos transportados" },
   { value: "72h", label: "Entrega maxima" },
-  { value: "100%", label: "Cobertura de seguro" },
-  { value: "24/7", label: "Atencion al cliente" },
+  { value: "100%", label: "Conductores profesionales" },
+  { value: "Directo", label: "Sin intermediarios" },
 ]
 
 export function StatsBanner() {

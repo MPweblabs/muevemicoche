@@ -4,7 +4,7 @@ const requirements = [
     {
         icon: Fuel,
         title: "Deposito lleno",
-        description: "Minimo 1/4 de combustible",
+        description: "Si no está lleno se cobra aparte el deposito",
     },
     {
         icon: FileCheck,
