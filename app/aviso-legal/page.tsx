@@ -60,7 +60,7 @@ export default function AvisoLegalPage() {
           <section>
             <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. Exclusión de Responsabilidad</h2>
             <p>
-              MueveMiCoche no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del sitio web o la transmisión de virus o programas maliciosos.
+              MueveMiCoche no se hace responsable de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos, falta de disponibilidad del sitio web o la transmisión de virus o programás maliciosos.
             </p>
           </section>
 

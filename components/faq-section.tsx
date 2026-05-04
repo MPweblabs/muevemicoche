@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
   {
-    question: "Como funciona el servicio?",
-    answer: "Recogemos tu coche en el punto acordado y lo entregamos en la direccion que nos indiques. Un conductor profesional se encarga de todo el traslado de forma segura.",
+    question: "Cómo funciona el servicio?",
+    answer: "Recogemos tu coche en el punto acordado y lo entregamos en la dirección que nos indiques. Un conductor profesional se encarga de todo el traslado de forma segura.",
   },
   {
     question: "Quien conduce mi coche?",
-    answer: "Tu vehiculo es trasladado por conductores profesionales con experiencia. No utilizamos gruas, el coche se conduce de forma segura durante todo el trayecto.",
+    answer: "Tu vehiculo es trasladado por conductores profesionales con experiencia. No utilizamos grúas, el coche se conduce de forma segura durante todo el trayecto.",
   },
   {
     question: "Cuanto tarda el traslado?",
@@ -24,14 +24,14 @@ const faqs = [
   },
   {
     question: "Desde donde hasta donde podeis recoger el coche?",
-    answer: "Ofrecemos servicio en toda Espana, recogiendo y entregando el vehiculo en la direccion que nos indiques (servicio puerta a puerta).",
+    answer: "Ofrecemos servicio en toda España, recogiendo y entregando el vehiculo en la dirección que nos indiques (servicio puerta a puerta).",
   },
   {
     question: "Que tipo de vehiculos podeis trasladar?",
-    answer: "Trabajamos con todo tipo de vehiculos, tanto manuales como automaticos.",
+    answer: "Trabajamos con todo tipo de vehiculos, tanto manuales Cómo automaticos.",
   },
   {
-    question: "Como solicito un traslado?",
+    question: "Cómo solicito un traslado?",
     answer: "Solo tienes que rellenar el formulario o contactar por WhatsApp. Te daremos un presupuesto sin compromiso.",
   },
   {
@@ -186,7 +186,7 @@ export function FaqSection() {
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-50" />
             <div className="relative">
               <h3 className="text-2xl font-bold mb-2">
-                Tienes mas preguntas?
+                ¿Tienes más preguntas?
               </h3>
               <p className="text-primary-foreground/80 mb-6">
                 Estamos aqui para ayudarte con cualquier duda

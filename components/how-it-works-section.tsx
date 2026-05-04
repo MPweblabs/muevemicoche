@@ -24,7 +24,7 @@ const steps = [
     number: "04",
     icon: MapPin,
     title: "Entrega garantizada",
-    description: "Rapido y seguro",
+    description: "Rápido y seguro",
   },
 ]
 
@@ -41,9 +41,9 @@ export function HowItWorksSection() {
           </span>
           <div className="w-8 h-0.5 bg-primary mx-auto mt-3 mb-6" />
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-            Como trasladamos tu coche{" "}
+            Cómo trasladamos tu coche{" "}
             <br className="hidden md:block" />
-            en Espana <span className="text-primary">en 4 pasos</span>
+            en España <span className="text-primary">en 4 pasos</span>
           </h2>
         </div>
 
