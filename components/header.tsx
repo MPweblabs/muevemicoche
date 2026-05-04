@@ -10,7 +10,7 @@ const navItems = [
   { label: "Proceso", href: "#como-funciona" },
   { label: "Faqs", href: "#faqs" },
   { label: "Calendario", href: "#disponibilidad" },
-  { label: "Colaboraciones", href: "#colaboraciones"},
+  { label: "Colaboraciones", href: "#colaboraciones" },
   { label: "Contacto", href: "#contacto" },
 ]
 
@@ -21,10 +21,12 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <span className="text-2xl font-bold text-foreground tracking-tight">
-            MueveMiCoche
-          </span>
+        <Link href="/" className="flex items-center gap-3 shrink-0">
+          <img
+            src="/logo.webp"
+            alt="Muevemicoche Logo"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
