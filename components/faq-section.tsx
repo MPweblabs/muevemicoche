@@ -7,40 +7,40 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
   {
-    question: "Cómo funciona el servicio?",
+    question: "¿Cómo funciona el servicio?",
     answer: "Recogemos tu coche en el punto acordado y lo entregamos en la dirección que nos indiques. Un conductor profesional se encarga de todo el traslado de forma segura.",
   },
   {
-    question: "Quien conduce mi coche?",
+    question: "¿Que necesito para que podais recoger mi coche?",
+    answer: "Respuesta aquí"
+  },
+  {
+    question: "¿Quien conduce mi coche?",
     answer: "Tu vehiculo es trasladado por conductores profesionales con experiencia. No utilizamos grúas, el coche se conduce de forma segura durante todo el trayecto.",
   },
   {
-    question: "Cuanto tarda el traslado?",
+    question: "¿Cuanto tarda el traslado?",
     answer: "El tiempo de entrega suele ser inferior a 72 horas, dependiendo de la distancia y disponibilidad.",
   },
   {
-    question: "El coche esta asegurado durante el traslado?",
+    question: "¿El coche esta asegurado durante el traslado?",
     answer: "Si, todos los traslados incluyen seguro para garantizar la tranquilidad durante todo el proceso.",
   },
   {
-    question: "Desde donde hasta donde podeis recoger el coche?",
+    question: "¿Desde donde hasta donde podeis recoger el coche?",
     answer: "Ofrecemos servicio en toda España, recogiendo y entregando el vehiculo en la dirección que nos indiques (servicio puerta a puerta).",
   },
   {
-    question: "Que tipo de vehiculos podeis trasladar?",
+    question: "¿Que tipo de vehiculos podeis trasladar?",
     answer: "Trabajamos con todo tipo de vehiculos, tanto manuales Cómo automaticos.",
   },
   {
-    question: "Cómo solicito un traslado?",
+    question: "{Cómo solicito un traslado?",
     answer: "Solo tienes que rellenar el formulario o contactar por WhatsApp. Te daremos un presupuesto sin compromiso.",
   },
   {
-    question: "Hay costes ocultos?",
+    question: "¿Hay costes ocultos?",
     answer: "No. El precio que te damos es final, sin sorpresas.",
-  },
-  {
-    question: "Puedo saber donde esta mi coche?",
-    answer: "Si, podras estar en contacto durante el proceso y conocer el estado del traslado.",
   },
 ]
 

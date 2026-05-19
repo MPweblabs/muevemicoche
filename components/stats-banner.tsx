@@ -1,5 +1,5 @@
 const stats = [
-  { value: "5.000+", label: "Vehiculos transportados" },
+  { value: "10+", label: "Años en el sector" },
   { value: "72h", label: "Entrega maxima" },
   { value: "100%", label: "Conductores profesionales" },
   { value: "Directo", label: "Sin intermediarios" },

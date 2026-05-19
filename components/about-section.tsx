@@ -40,12 +40,10 @@ export function AboutSection() {
               Sobre nosotros
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-4 leading-tight">
-              {"¿Te gusta conducir?"}
+              {"Comprar un coche fuera no debería ser un problema"}
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Llevamos años transportando vehiculos por toda España.
-              Nuestro equipo de profesionales garantiza que tu coche
-              llegue en perfectas condiciones.
+              Comprar un coche fuera de tu ciudad no debería ser un problema. En MueveMiCoche nos encargamos de recogerlo y entregarlo donde nos indiques, con un proceso claro, seguro y sin complicaciones.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-10">
