@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     question: "¿Que necesito para que podais recoger mi coche?",
-    answer: "Respuesta aquí"
+    answer: "Tanque de combustible lleno, itv pasada, papeles y seguro en regla. Nada más."
   },
   {
     question: "¿Quien conduce mi coche?",

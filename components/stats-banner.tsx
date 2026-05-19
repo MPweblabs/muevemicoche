@@ -2,7 +2,7 @@ const stats = [
   { value: "10+", label: "Años en el sector" },
   { value: "72h", label: "Entrega maxima" },
   { value: "100%", label: "Conductores profesionales" },
-  { value: "Directo", label: "Sin intermediarios" },
+  { value: "0€", label: "Costes Ocultos" },
 ]
 
 export function StatsBanner() {
