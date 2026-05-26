@@ -8,7 +8,7 @@ import { Handshake, Plus } from "lucide-react"
 const collaborators = [
   { 
     name: "Bca group", 
-    logo: "/images/collaborations/bca-group.png", // Cambia a: "/logos/empresa1.png"
+    logo: "/images/collaborations/bca-group.png",
   },
   { 
     name: "Automóviles Cobeña", 
@@ -27,9 +27,22 @@ const collaborators = [
     logo: "/images/collaborations/Europcar.jpeg",
   },
   { 
-    name: "Empresa 6", 
+    name: "Alcopa", 
     logo: "/images/collaborations/Alcopa.jpeg",
   },
+  { 
+    name: "Axxa", 
+    logo: "/images/collaborations/Axxa.jpg",
+  },
+  { 
+    name: "Occident", 
+    logo: "/images/collaborations/Occident.webp",
+  },
+  { 
+    name: "Terrania", 
+    logo: "/images/collaborations/Terrania.png",
+  },
+  
 ]
 
 export function CollaborationsSection() {
