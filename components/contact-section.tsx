@@ -21,7 +21,7 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (!acceptedPrivacy) return
-    const message = `Hola, me gustaria contactar:\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTelefono: ${formData.phone}\n\nMensaje: ${formData.message}`
+    const message = `Hola, me gustaría contactar:\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\n\nMensaje: ${formData.message}`
     window.open(`https://wa.me/34603950295?text=${encodeURIComponent(message)}`, '_blank')
   }
 
@@ -52,7 +52,7 @@ export function ContactSection() {
           {/* Left - Contact Info */}
           <div className="space-y-8">
             <p className="text-lg text-muted-foreground">
-              Estamos aqui para ayudarte. Contactanos por el medio que prefieras.
+              Estamos aquí para ayudarte. Contáctanos por el medio que prefieras.
             </p>
 
             <div className="space-y-6">
@@ -61,7 +61,7 @@ export function ContactSection() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm text-muted-foreground">Telefono</div>
+                  <div className="text-sm text-muted-foreground">Teléfono</div>
                   <a href="tel:+34603950295" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
                     +34 603 95 02 95
                   </a>
@@ -125,7 +125,7 @@ export function ContactSection() {
                 <Input
                   name="phone"
                   type="tel"
-                  placeholder="Telefono"
+                  placeholder="Teléfono"
                   value={formData.phone}
                   onChange={handleChange}
                   className="h-12 bg-muted border-0"
@@ -151,7 +151,7 @@ export function ContactSection() {
                 <label htmlFor="privacy" className="text-sm text-muted-foreground">
                   Acepto la{" "}
                   <Link href="/privacidad" className="text-primary hover:underline">
-                    politica de privacidad
+                    política de privacidad
                   </Link>
                 </label>
               </div>

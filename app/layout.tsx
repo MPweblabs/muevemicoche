@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   description: 'Transporte de coches en Madrid y toda España. Recogida en 24h, entrega en 72h. Precio cerrado, 100% asegurado. Presupuesto gratis. Servicio puerta a puerta desde Madrid.',
   keywords: [
     'transporte coches Madrid',
-    'transporte vehiculos Madrid',
+    'transporte vehículos Madrid',
     'transporte de coches',
-    'transporte de vehiculos',
+    'transporte de vehículos',
     'enviar coche Madrid',
     'mover coche Madrid',
     'transporte coche Madrid Barcelona',
     'transporte coche Madrid Valencia',
     'transporte coche Madrid Sevilla',
     'portacoches Madrid',
-    'grua coches Madrid',
+    'grúa coches Madrid',
     'transporte urgente vehiculos',
     'transporte coches 72 horas',
     'presupuesto transporte coche',
@@ -103,7 +103,7 @@ export default function RootLayout({
               "email": "info@muevemicoche.es",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Calle Gran Via 1",
+                "streetAddress": "Calle Gran Vía 1",
                 "addressLocality": "Madrid",
                 "addressRegion": "Madrid",
                 "postalCode": "28013",
@@ -152,14 +152,14 @@ export default function RootLayout({
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Servicios de Transporte de Vehiculos",
+                "name": "Servicios de Transporte de Vehículos",
                 "itemListElement": [
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
                       "name": "Transporte de coches Madrid",
-                      "description": "Recogida de vehiculos en Madrid y entrega en toda España en 72h"
+                      "description": "Recogida de vehículos en Madrid y entrega en toda España en 72h"
                     }
                   },
                   {
@@ -175,7 +175,7 @@ export default function RootLayout({
                     "itemOffered": {
                       "@type": "Service", 
                       "name": "Transporte flotas",
-                      "description": "Servicio de transporte para concesionarios y flotas de vehiculos"
+                      "description": "Servicio de transporte para concesionarios y flotas de vehículos"
                     }
                   }
                 ]

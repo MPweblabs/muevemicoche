@@ -3,23 +3,23 @@ import { Fuel, FileCheck, Shield, Key, AlertCircle } from "lucide-react"
 const requirements = [
     {
         icon: Fuel,
-        title: "Deposito lleno",
-        description: "Si no está lleno se cobra aparte el deposito",
+        title: "Depósito lleno",
+        description: "Si no está lleno se cobra aparte el depósito",
     },
     {
         icon: FileCheck,
         title: "ITV en vigor",
-        description: "Inspeccion tecnica al dia",
+        description: "Inspección técnica al día",
     },
     {
         icon: Shield,
         title: "Seguro activo",
-        description: "Poliza de seguro vigente",
+        description: "Póliza de seguro vigente",
     },
     {
         icon: Key,
-        title: "Documentacion",
-        description: "Permiso de circulacion y ficha tecnica",
+        title: "Documentación",
+        description: "Permiso de circulación y ficha técnica",
     },
 ]
 
@@ -30,7 +30,7 @@ export function RequirementsInfo({ variant = "light" }: { variant?: "light" | "d
         <div className={`rounded-2xl p-6 ${isDark ? "bg-background/10" : "bg-muted"}`}>
             <div className={`flex items-center gap-2 mb-4 ${isDark ? "text-background" : "text-foreground"}`}>
                 <AlertCircle className="h-5 w-5" />
-                <h4 className="font-semibold">Requisitos del vehiculo</h4>
+                <h4 className="font-semibold">Requisitos del vehículo</h4>
             </div>
             <div className="grid grid-cols-2 gap-4">
                 {requirements.map((req) => (

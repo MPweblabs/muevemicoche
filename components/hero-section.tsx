@@ -14,11 +14,11 @@ import {
 import { RequirementsInfo } from "@/components/requirements-info"
 
 const vehicleTypes = [
-  { value: "sedan", label: "Turismo / Sedan" },
+  { value: "sedan", label: "Turismo / Sedán" },
   { value: "suv", label: "SUV / Todoterreno" },
   { value: "furgoneta", label: "Furgoneta" },
   { value: "moto", label: "Motocicleta" },
-  { value: "clasico", label: "Vehiculo clasico" },
+  { value: "clasico", label: "Vehículo clásico" },
   { value: "otro", label: "Otro" },
 ]
 
@@ -29,7 +29,7 @@ export function HeroSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const message = `Hola, me gustaria solicitar presupuesto:\n\n- Origen: ${origin}\n- Destino: ${destination}\n- Vehiculo: ${vehicleTypes.find(v => v.value === vehicleType)?.label || vehicleType}`
+    const message = `Hola, me gustaría solicitar presupuesto:\n\n- Origen: ${origin}\n- Destino: ${destination}\n- Vehículo: ${vehicleTypes.find(v => v.value === vehicleType)?.label || vehicleType}`
     const whatsappUrl = `https://wa.me/34603950295?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
@@ -64,7 +64,7 @@ export function HeroSection() {
             </h1>
 
             <p className="mt-8 text-xl text-muted-foreground max-w-lg">
-              Transporte de vehiculos puerta a puerta en toda España.
+              Transporte de vehículos puerta a puerta en toda España.
               Sin complicaciones.
             </p>
 
@@ -128,7 +128,7 @@ export function HeroSection() {
                   <Select value={vehicleType} onValueChange={setVehicleType} required>
                     <SelectTrigger className="w-full h-14 bg-background/10 border-background/20 text-background rounded-xl [&>span]:text-background/40 [&[data-state=open]>span]:text-background">
                       <Car className="mr-2 h-5 w-5 text-background/40" />
-                      <SelectValue placeholder="Tipo de vehiculo" />
+                      <SelectValue placeholder="Tipo de vehículo" />
                     </SelectTrigger>
                     <SelectContent>
                       {vehicleTypes.map((type) => (

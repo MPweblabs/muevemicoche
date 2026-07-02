@@ -20,7 +20,7 @@ const footerLinks = {
     { label: "Aviso legal", href: "/aviso-legal" },
     { label: "Privacidad", href: "/privacidad" },
     { label: "Cookies", href: "/cookies" },
-    { label: "Terminos", href: "/terminos" },
+    { label: "Términos", href: "/terminos" },
   ],
 }
 
@@ -49,7 +49,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-background">
-                Listo para mover tu coche?
+                ¿Listo para mover tu coche?
               </h3>
               <p className="text-background/60 mt-2">
                 Pide tu presupuesto gratis en menos de 1 minuto.
@@ -74,7 +74,7 @@ export function Footer() {
               <span className="text-2xl font-bold text-background">MueveMiCoche</span>
             </Link>
             <p className="mt-4 max-w-sm text-background/50">
-              Transporte de vehiculos puerta a puerta en toda España. Entrega garantizada en 72 horas.
+              Transporte de vehículos puerta a puerta en toda España. Entrega garantizada en 72 horas.
             </p>
             {/* Social Links */}
             <div className="mt-6 flex gap-3">
@@ -83,7 +83,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 text-background/70 transition-colors hover:bg-primary hover:text-background"
-                aria-label="Siguenos en Instagram"
+                aria-label="Síguenos en Instagram"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
@@ -92,7 +92,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-background/10 text-background/70 transition-colors hover:bg-primary hover:text-background"
-                aria-label="Siguenos en TikTok"
+                aria-label="Síguenos en TikTok"
               >
                 <TikTokIcon className="h-5 w-5" />
               </a>

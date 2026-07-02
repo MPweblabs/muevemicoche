@@ -2,7 +2,7 @@
 
 import { Handshake, Plus } from "lucide-react"
 
-// Para anadir logos reales:
+// Para añadir logos reales:
 // 1. Sube los logos a /public/logos/ (formato PNG o SVG)
 // 2. Cambia "logo: null" por "logo: '/logos/nombre-empresa.png'"
 const collaborators = [
@@ -38,11 +38,18 @@ const collaborators = [
     name: "Occident", 
     logo: "/images/collaborations/Occident.webp",
   },
-  { 
-    name: "Terrania", 
+  {
+    name: "Terrania",
     logo: "/images/collaborations/Terrania.png",
   },
-  
+  {
+    name: "Auracar",
+    logo: "/images/collaborations/Auracar.png",
+  },
+  {
+    name: "F.Tome",
+    logo: "/images/collaborations/FTome.svg",
+  },
 ]
 
 export function CollaborationsSection() {
@@ -59,22 +66,22 @@ export function CollaborationsSection() {
             Colaboramos con los mejores
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Empresas que confian en nosotros
+            Empresas que confían en nosotros
           </p>
         </div>
 
         {/* Logos grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {collaborators.map((collab, index) => (
-            <div 
+            <div
               key={index}
-              className="flex items-center justify-center p-6 h-24 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
+              className="flex items-center justify-center p-6 h-28 rounded-xl bg-white border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300"
             >
               {collab.logo ? (
-                <img 
-                  src={collab.logo} 
+                <img
+                  src={collab.logo}
                   alt={`Logo de ${collab.name}`}
-                  className="max-h-10 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  className="max-h-14 max-w-[85%] w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                 />
               ) : (
                 <div className="flex flex-col items-center gap-2 text-muted-foreground/50">
@@ -95,7 +102,7 @@ export function CollaborationsSection() {
             href="#contacto" 
             className="text-primary font-medium hover:underline"
           >
-            Contactaños para más informacion
+            Contáctanos para más información
           </a>
         </div>
       </div>

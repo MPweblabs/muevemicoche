@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 
 const WHATSAPP_NUMBER = "34603950295"
-const WHATSAPP_MESSAGE = "Hola, me gustaria solicitar informacion sobre el transporte de mi vehiculo."
+const WHATSAPP_MESSAGE = "Hola, me gustaría solicitar información sobre el transporte de mi vehículo."
 
 export function WhatsAppButton() {
   const [isVisible, setIsVisible] = useState(false)

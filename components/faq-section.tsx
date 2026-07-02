@@ -11,31 +11,31 @@ const faqs = [
     answer: "Recogemos tu coche en el punto acordado y lo entregamos en la dirección que nos indiques. Un conductor profesional se encarga de todo el traslado de forma segura.",
   },
   {
-    question: "¿Que necesito para que podais recoger mi coche?",
-    answer: "Tanque de combustible lleno, itv pasada, papeles y seguro en regla. Nada más."
+    question: "¿Qué necesito para que podáis recoger mi coche?",
+    answer: "Tanque de combustible lleno, ITV pasada, papeles y seguro en regla. Nada más."
   },
   {
-    question: "¿Quien conduce mi coche?",
-    answer: "Tu vehiculo es trasladado por conductores profesionales con experiencia. No utilizamos grúas, el coche se conduce de forma segura durante todo el trayecto.",
+    question: "¿Quién conduce mi coche?",
+    answer: "Tu vehículo es trasladado por conductores profesionales con experiencia. No utilizamos grúas, el coche se conduce de forma segura durante todo el trayecto.",
   },
   {
-    question: "¿Cuanto tarda el traslado?",
+    question: "¿Cuánto tarda el traslado?",
     answer: "El tiempo de entrega suele ser inferior a 72 horas, dependiendo de la distancia y disponibilidad.",
   },
   {
-    question: "¿El coche esta asegurado durante el traslado?",
-    answer: "Si, todos los traslados incluyen seguro para garantizar la tranquilidad durante todo el proceso.",
+    question: "¿El coche está asegurado durante el traslado?",
+    answer: "Sí, todos los traslados incluyen seguro para garantizar la tranquilidad durante todo el proceso.",
   },
   {
-    question: "¿Desde donde hasta donde podeis recoger el coche?",
-    answer: "Ofrecemos servicio en toda España, recogiendo y entregando el vehiculo en la dirección que nos indiques (servicio puerta a puerta).",
+    question: "¿Desde dónde hasta dónde podéis recoger el coche?",
+    answer: "Ofrecemos servicio en toda España, recogiendo y entregando el vehículo en la dirección que nos indiques (servicio puerta a puerta).",
   },
   {
-    question: "¿Que tipo de vehiculos podeis trasladar?",
-    answer: "Trabajamos con todo tipo de vehiculos, tanto manuales Cómo automaticos.",
+    question: "¿Qué tipo de vehículos podéis trasladar?",
+    answer: "Trabajamos con todo tipo de vehículos, tanto manuales como automáticos.",
   },
   {
-    question: "{Cómo solicito un traslado?",
+    question: "¿Cómo solicito un traslado?",
     answer: "Solo tienes que rellenar el formulario o contactar por WhatsApp. Te daremos un presupuesto sin compromiso.",
   },
   {
@@ -189,7 +189,7 @@ export function FaqSection() {
                 ¿Tienes más preguntas?
               </h3>
               <p className="text-primary-foreground/80 mb-6">
-                Estamos aqui para ayudarte con cualquier duda
+                Estamos aquí para ayudarte con cualquier duda
               </p>
               <Button 
                 asChild 
@@ -199,7 +199,7 @@ export function FaqSection() {
               >
                 <a href="#contacto">
                   <MessageCircle className="w-5 h-5" />
-                  Contactanos ahora
+                  Contáctanos ahora
                 </a>
               </Button>
             </div>

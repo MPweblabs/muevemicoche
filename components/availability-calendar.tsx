@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Loader2, CalendarCheck, CalendarX } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const DAYS_OF_WEEK = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
+const DAYS_OF_WEEK = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 const MONTHS = [
   "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
   "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
@@ -234,7 +234,7 @@ export function AvailabilityCalendar() {
               <div className="bg-green-500 rounded-2xl p-6 text-white">
                 <CalendarCheck className="w-10 h-10 mb-4 opacity-80" />
                 <div className="text-5xl font-bold mb-2">{availableCount}</div>
-                <p className="text-green-100 font-medium">dias disponibles</p>
+                <p className="text-green-100 font-medium">días disponibles</p>
               </div>
 
               {/* Legend card */}
@@ -266,9 +266,9 @@ export function AvailabilityCalendar() {
               {/* CTA card */}
               <div className="bg-foreground rounded-2xl p-6 text-background">
                 <CalendarX className="w-8 h-8 mb-3 text-background/60" />
-                <h4 className="font-semibold mb-2">No encuentras fecha?</h4>
+                <h4 className="font-semibold mb-2">¿No encuentras fecha?</h4>
                 <p className="text-sm text-background/60 mb-4">
-                  Contactaños y buscamos una solucion
+                  Contáctanos y buscamos una solución
                 </p>
                 <Button 
                   asChild 
@@ -283,7 +283,7 @@ export function AvailabilityCalendar() {
             {/* Mobile CTA - shown only on mobile */}
             <div className="lg:hidden mt-4">
               <Button asChild className="w-full" size="lg">
-                <a href="#contacto">No encuentras fecha? Contactaños</a>
+                <a href="#contacto">¿No encuentras fecha? Contáctanos</a>
               </Button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 const stats = [
   { value: "10+", label: "Años en el sector" },
-  { value: "72h", label: "Entrega maxima" },
+  { value: "72h", label: "Entrega máxima" },
   { value: "100%", label: "Conductores profesionales" },
   { value: "0€", label: "Costes Ocultos" },
 ]

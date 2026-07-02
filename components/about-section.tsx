@@ -74,7 +74,7 @@ export function AboutSection() {
             {/* Floating card */}
             <div className="absolute -bottom-6 -left-6 bg-foreground text-background p-6 rounded-2xl shadow-xl">
               <div className="text-3xl font-bold">+5.000</div>
-              <div className="text-background/60 text-sm">Vehiculos transportados</div>
+              <div className="text-background/60 text-sm">Vehículos transportados</div>
             </div>
           </div>
         </div>
