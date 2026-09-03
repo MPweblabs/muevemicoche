@@ -63,6 +63,8 @@ export async function GET() {
 
     })
 
+    console.log(response)
+    
     if (!response.ok) {
       return NextResponse.json({ busyDates: [], isDemo: true })
     }
